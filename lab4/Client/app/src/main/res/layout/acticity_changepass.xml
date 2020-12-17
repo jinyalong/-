@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:filterTouchesWhenObscured="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username_zc"
+            android:layout_marginTop="55dp"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:inputType="text"
+                android:layout_marginTop="5dp"
+                android:paddingRight="60dp"
+                android:maxLength="10"
+                android:paddingLeft="55dp"
+                android:hint=" Username"/>
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="left|center_horizontal"
+                android:src="@drawable/username"
+                android:layout_marginLeft="8dp"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/Teleno_zc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_zc"
+            android:layout_marginTop="6dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/teleno"
+                android:inputType="phone"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:maxLength="11"
+                android:paddingLeft="55dp"
+                android:paddingRight="60dp"
+                android:hint="  Telephone"/>
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/phone"
+                android:layout_marginLeft="8dp" />
+
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/yam_zc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Teleno_zc"
+            android:layout_marginTop="6dp"
+            android:gravity="center" >
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/yzm"
+                android:layout_width="200dp"
+                android:layout_height="55dp"
+                android:hint="  验证码"
+                android:inputType="phone"
+                android:maxLength="6"
+                android:paddingLeft="0dp"
+                android:paddingRight="60dp" />
+
+            <Button
+                android:id="@+id/btn_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="获取验证码" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/pw_zc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yam_zc"
+            android:layout_marginTop="6dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/pw"
+                android:inputType="textPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:maxLength="12"
+                android:paddingLeft="55dp"
+                android:paddingRight="60dp"
+                android:hint="  New Password"/>
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/ss"
+                android:layout_marginLeft="8dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pw1_zc"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pw_zc"
+            android:layout_marginTop="6dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/pw1"
+                android:inputType="textPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:maxLength="12"
+                android:paddingLeft="55dp"
+                android:paddingRight="60dp"
+                android:hint="  Confirm Password"/>
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/ss"
+                android:layout_marginLeft="8dp" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/changepass"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/pw1_zc"
+            android:layout_marginTop="30dp"
+            android:background="#ff336699"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="修改" />
+        <Button
+            android:id="@+id/back_to"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/changepass"
+            android:layout_marginTop="30dp"
+            android:background="#ff336699"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="返回登录"
+            android:onClick="back_to"/>
+    </RelativeLayout>
+</RelativeLayout>
